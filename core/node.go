@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	panel "github.com/wyx2685/v2node/api/v2board"
-	"github.com/wyx2685/v2node/limiter"
+	panel "github.com/EchoHS/v2node/api/v2board"
+	"github.com/EchoHS/v2node/limiter"
 	"github.com/xtls/xray-core/infra/conf"
 )
 

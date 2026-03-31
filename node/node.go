@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	log "github.com/sirupsen/logrus"
-	panel "github.com/wyx2685/v2node/api/v2board"
-	"github.com/wyx2685/v2node/conf"
-	"github.com/wyx2685/v2node/core"
+	panel "github.com/EchoHS/v2node/api/v2board"
+	"github.com/EchoHS/v2node/conf"
+	"github.com/EchoHS/v2node/core"
 )
 
 type Node struct {
