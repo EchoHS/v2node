@@ -2,7 +2,6 @@ package core
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"time"
 
@@ -42,15 +41,11 @@ func buildDefaultOutbound() (*core.OutboundHandlerConfig, error) {
 	//sendthrough := "origin"
 	//outboundDetourConfig.SendThrough = &sendthrough
 
-	proxySetting := &conf.FreedomConfig{
-		DomainStrategy: "UseIPv4v6",
+	outboundDetourConfig.StreamSetting = &conf.StreamConfig{
+		SocketSettings: &conf.SocketConfig{
+			DomainStrategy: "UseIPv4v6",
+		},
 	}
-	var setting json.RawMessage
-	setting, err := json.Marshal(proxySetting)
-	if err != nil {
-		return nil, fmt.Errorf("marshal proxy config error: %s", err)
-	}
-	outboundDetourConfig.Settings = &setting
 	return outboundDetourConfig.Build()
 }
 
